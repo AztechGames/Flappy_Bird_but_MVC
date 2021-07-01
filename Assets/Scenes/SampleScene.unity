@@ -674,7 +674,6 @@ GameObject:
   m_Component:
   - component: {fileID: 484630104}
   - component: {fileID: 484630103}
-  - component: {fileID: 484630102}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -682,18 +681,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &484630102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484630101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5b0945bf8995e4480ad05abffb7a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &484630103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -907,8 +894,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1245426886}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1934947761}
+        m_TargetAssemblyTypeName: View, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1580,27 +1567,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1245426885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce80688948aab04e9b6c8ded830e813, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a0ba3e5570b45a44aea535a67698b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamestate: 0
-  Numbers:
-  - {fileID: -2973451351822383342, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: 3451190071909101743, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: 8695887021816083447, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: -4809084988604215588, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: -8290585274801552863, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: 1899595676840537912, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: -2869783914564518182, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: 4083902174034976327, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: -6180101023728018127, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  - {fileID: -3748392377035486473, guid: 7f427a47463987745887cf40fe57d580, type: 3}
-  Units: {fileID: 1483073201}
-  Tens: {fileID: 2095395944}
-  Hundreds: {fileID: 324081562}
-  GameOver: {fileID: 2029680713}
-  TaptoStart: {fileID: 696733534}
-  score: 0
+  view: {fileID: 1934947761}
 --- !u!4 &1245426887
 Transform:
   m_ObjectHideFlags: 0
@@ -2269,9 +2239,9 @@ GameObject:
   - component: {fileID: 1934947757}
   - component: {fileID: 1934947756}
   - component: {fileID: 1934947755}
-  - component: {fileID: 1934947758}
   - component: {fileID: 1934947760}
   - component: {fileID: 1934947759}
+  - component: {fileID: 1934947761}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Player
@@ -2363,20 +2333,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1934947758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934947754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a6353c251d4dd449cbecadf17078a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumppower: 4
-  downrotate: 0.7
 --- !u!50 &1934947759
 Rigidbody2D:
   serializedVersion: 4
@@ -2414,6 +2370,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13
+--- !u!114 &1934947761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934947754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f1151882623e242a8916db98218a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 2029680713}
+  taptoStart: {fileID: 696733534}
+  Units: {fileID: 1483073201}
+  Tens: {fileID: 2095395944}
+  Hundreds: {fileID: 324081562}
+  gstate: 0
 --- !u!1 &1981653802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2627,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1245426886}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
